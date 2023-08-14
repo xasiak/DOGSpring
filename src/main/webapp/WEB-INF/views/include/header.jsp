@@ -22,7 +22,7 @@
             <ul id="top-menu">
 				<c:if test="${sessionScope.memberEmail ne null}">
                 <li><a href="/member/logout.do">로그아웃</a></li>
-                <li><a href="/member/update.do?member-email=${memberEmail }">마이페이지</a></li>
+                <li><a href="/member/myPage.do?member-email=${memberEmail }">마이페이지</a></li>
         		</c:if>
         		<c:if test="${sessionScope.memberEmail eq null}">
                 <li><a href="/member/login.do">로그인</a></li>

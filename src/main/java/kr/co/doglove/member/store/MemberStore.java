@@ -6,7 +6,7 @@ import kr.co.doglove.member.domain.Member;
 
 public interface MemberStore {
 	
-	public Member selectCheckLogin(SqlSession sqlSession, Member member);
+	public Member memberLoginCheck(SqlSession sqlSession, Member member);
 	
 	public Member selectOneByEmail(SqlSession sqlSession, String memberEmail);
 

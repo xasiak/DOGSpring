@@ -9,5 +9,6 @@
 <!-- 매퍼 만들고 등록해야지 -->
 	<mappers>
 		<mapper resource="mapper/member-mapper.xml"></mapper>
+		<mapper resource="mapper/visit-mapper.xml"></mapper>
 	</mappers>
 </configuration>

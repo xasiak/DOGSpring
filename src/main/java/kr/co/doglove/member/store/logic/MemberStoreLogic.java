@@ -10,15 +10,15 @@ import kr.co.doglove.member.store.MemberStore;
 public class MemberStoreLogic implements MemberStore{
 
 	@Override
-	public Member selectCheckLogin(SqlSession sqlSession, Member member) {
-		// TODO Auto-generated method stub
-		return null;
+	public Member memberLoginCheck(SqlSession sqlSession, Member member) {
+		Member mOne = sqlSession.selectOne("MemberMapper.selectMemberLogin", member);
+		return mOne;
 	}
 
 	@Override
 	public Member selectOneByEmail(SqlSession sqlSession, String memberEmail) {
-		// TODO Auto-generated method stub
-		return null;
+		Member member = sqlSession.selectOne("MemberMapper.selectOneByEmail", memberEmail);
+		return member;
 	}
 
 	@Override
@@ -29,14 +29,14 @@ public class MemberStoreLogic implements MemberStore{
 
 	@Override
 	public int updateMember(SqlSession sqlSession, Member member) {
-		// TODO Auto-generated method stub
-		return 0;
+		int result = sqlSession.update("MemberMapper.updateMember", member);
+		return result;
 	}
 
 	@Override
 	public int deleteMember(SqlSession sqlSession, String memberEmail) {
-		// TODO Auto-generated method stub
-		return 0;
+		int result = sqlSession.delete("MemberMapper.deleteMember", memberEmail);
+				return result;
 	}
 
 }
